@@ -1,3 +1,6 @@
+// Works in p5 live with Hydra sandbox
+
+
 let libs = ['https://unpkg.com/hydra-synth', 'includes/libs/hydra-synth.js']
 
 
