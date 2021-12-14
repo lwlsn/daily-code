@@ -61,8 +61,8 @@ function drawSnowflake(mx, my, size) {
     line(rx, ry, rx +r2*sin(PI/3), ry+r2*cos(PI/3));
     push();
     translate(rx, ry);
-        line(0, 0, r2*sin(PI/6), r2*cos(PI/6) );
-        line(0, 0, r2*sin(-PI/6), r2*cos(PI/6) );
+        line(0, 0, r2*sin(theta*PI/2), r2*cos(theta*PI/2) );
+        line(0, 0, r2*sin(theta*PI/2), r2*cos(theta*PI/2) );
     pop();
   }
 }
