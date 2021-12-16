@@ -28,7 +28,7 @@ function draw() {
 
     for (let i = 0; i <= TWO_PI; i+= TWO_PI/3) {
         fill("#D4E8ED");
-        ellipse(r[0]*cos(theta+i+jitter), r[0]*sin(theta+i)+jitter, 50, 50);
+        ellipse(r[0]*cos(theta+i+jitter), r[0]*sin(theta+i+jitter), 50, 50);
     }
    
     for (let i = 0; i <= TWO_PI; i+= TWO_PI/7) {
