@@ -64,11 +64,19 @@ function draw() {
    }
 
    // Draw.. 
-   textSize(200);
+   textSize(60);
    fill(0,0,0, 255);
-   text("🐿", width/2, 400);
+   text("🐿", 400, 500);
 
+   textSize(100);
+   text("🦔", 550, 500);
 
+   textSize(300);
+   text("🌲", 100, 300);
+   text("🌲", 180, 350);
+   text("🌲", 50, 320);
+
+ 
    
 
 }
