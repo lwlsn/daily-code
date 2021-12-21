@@ -37,9 +37,7 @@ function draw() {
         }
  
 
-
     }
-
 
 }
 
