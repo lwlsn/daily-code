@@ -134,7 +134,7 @@ class Cloud {
 
     fill(255, 255, 255, 220); // white
     // left cloud
-     ellipse(this.lx, this.h, 126, 97);
+    ellipse(this.lx, this.h, 126, 97);
     fill(255, 255, 255, 250); // white
     ellipse(this.lx+62, this.h, 70, 60);
     fill(255, 255, 255, 220); // white
