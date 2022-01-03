@@ -7,7 +7,7 @@ let colorArray = ["#0a0a0a","#ffffff", "#ffffff", "#ffffff", "#ff0505"];
 function setup() {
     createCanvas(600, 600);
 
-    frameRate(5);
+    frameRate(8);
 
 }
 
