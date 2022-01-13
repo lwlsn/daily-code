@@ -10,8 +10,6 @@ function setup() {
 
     background(0);
 
-
-    
     noFill();
 
     for (let i = 0; i < size; i++) {
