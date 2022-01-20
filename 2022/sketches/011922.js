@@ -5,6 +5,7 @@
 let lineCoords = [];
 let numLines = 10;
 let circleMax = 400;
+let speeds = [];
 
 let x,y;
 
@@ -14,7 +15,8 @@ function setup(){
 
 
     for (let i = 0; i < numLines; i ++ ) {
-        lineCoords[i] = createVector(random(circleMax/2, circleMax/2+100), random(TWO_PI) );    
+        lineCoords[i] = createVector(random(circleMax/2, circleMax/2+100), random(TWO_PI) );
+        speeds[i] = random(0.005, 0.02);    
     }
   
 
@@ -88,8 +90,13 @@ function draw() {
        else {
         arc(0, 0, lineCoords[i].x*0.4, lineCoords[i].x*0.4, lineCoords[i].y , 2*PI);
        } 
+
+       
     }
 
+    for (let i=0; i <numLines; i++) {
+        lineCoords[i].y += speeds[i];
+   }
     
 
 }
