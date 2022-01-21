@@ -18,8 +18,8 @@ function draw() {
     let level = size;
 
     let r = random(1);
-    let n = noise(random(1));
-    print(n);
+    // let n = noise(random(1));
+    // print(n);
 
     if (r < 0.5) {
         stroke(255);
