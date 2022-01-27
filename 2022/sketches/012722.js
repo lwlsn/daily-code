@@ -1,19 +1,35 @@
 // Thursday 27th January 
 
+// Accidental pattern ..
+
 let barcodes = [];
 let randColours = [];
+let black, white;
+let colourArray= [];
+let topColorArray = [];
 
 function setup() {
   
     createCanvas(600, 600);
     noStroke();
+    // noLoop();
 
+    //INIT
     for (let i=0; i <1; i++) {
         barcodes[i] = new Barcode(100, 100, 400);
     }
 
-    for (let j=0; j< 1000; j++) {
-        randColours[j] = randomColour(random(1));
+    black = color(0);
+    white = color(255);
+    colourArray = [black, white];
+
+    for (let i=0; i < 120; i ++) {
+        topColorArray[i] = floor(random(2));
+
+    }
+
+    for (let i=0; i < 2000; i++) {
+        randColours[i] = random(colourArray);
     }
 
 
@@ -84,15 +100,22 @@ class Barcode {
         rectMode(CORNER);
         push();
             translate(this.x, this.y);
-            let r = random(1);
+        
             
-            // Top half
+           //  Top half
+            
             for (let j=50; j< this.size-50 ; j += 10) {
                 for (let k=10; k < 50; k += 10) {
+              
+                
+                    fill(randColours[(j+k)%100]); // fix this line to randomly select colour by column.  
+                
+                    rect(j, k, 10, 10);
                     
-                        fill(randColours[(j+k)%100]);
-                        rect(j, k, 10, 10);
-                    }
+
+                }
+                    
+                    
                  
             }
 
@@ -101,6 +124,7 @@ class Barcode {
                 for (let k=50; k <350; k += 10) {
                     
                         fill(randColours[(j+k)%100]); // fix this line to randomly select colour by column.  
+                        // fill(randColours[j]%this.size);
                         rect(j, k, 10, 10);
                     }
                  
@@ -115,18 +139,19 @@ class Barcode {
                         rect(j, k, 10, 10);
                     }
                  
-            }
-            
+            }  
         
         pop();
      
     }
 }
 
-function randomColour(r) {
+
+function chooseColour(r) {
     if (r < 0.5) {
-        return 0;
-    } else {
-        return 255;
+        return black;
+    }
+    else {
+        return white;
     }
 }
