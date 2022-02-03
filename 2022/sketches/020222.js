@@ -1,10 +1,13 @@
 // Wednesday 2 February 2022 
 // Hmm webGL you tricky.. 
 
+
+
 function setup() {
     createCanvas(600, 600, WEBGL);
 
     noStroke();
+
   }
   
   function draw() {
