@@ -42,17 +42,20 @@ function draw() {
 
         if (squareSizes[i] > 100) {
 
-            isDecreasing = true;
+            // isDecreasing = true;
+            speed *= -1;
+
         }
 
         if (squareSizes[i] < 10) {
-            isDecreasing = false;
+            // isDecreasing = false;
+            speed *= -1; 
         }
 
     }
 
 
-    switcher();
+
 
 
 
