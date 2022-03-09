@@ -219,7 +219,7 @@ class House {
         //     line(0, i, -this.sizeX+36, i);
         // }
 
-        // // Right panel
+        // Right panel
         // noStroke();
         // rect(doorStartX+24,0, 52, 100);
         // for (let i=0; i < 100; i+= 5) {
@@ -280,7 +280,10 @@ class Pylon {
         fill("#baa79e");
         rect(this.x, this.y, this.width, this.length);
         fill("#f2edeb");
-        rect(this.x, this.y+this.length*(2/3), this.width, this.length/3);
+        rect(this.x, this.y+this.length*(3/4), this.width, this.length/4);
+        fill(153);
+        textWrap(CHAR);
+        text("お誕生日おめでとうママ",this.x, this.y+20, 15, 300);
 
 
         // cables 
@@ -289,11 +292,13 @@ class Pylon {
         strokeWeight(2);
         this.curveBetween(this.x, this.y, this.x+300, this.y, 0.3, 0.15, 0);
         this.curveBetween(this.x, this.y, this.x+300, this.y, 0.5, 0.15, 0);
+        strokeWeight(1);
         this.curveBetween(this.x, this.y+10, this.x+300, this.y+10, 0.3, 0.15, 0);
         this.curveBetween(this.x, this.y+10, this.x+300, this.y+10, 0.3, 0.2, 0);
-        this.curveBetween(this.x, this.y+50, this.x+300, this.y+10, 0.3, 0.2, 0);
-        this.curveBetween(this.x, this.y+50, this.x+300, this.y+10, 0.3, 0.2, 0);
-    
+        strokeWeight(2);
+        this.curveBetween(this.x, this.y+50, this.x+300, this.y+50, 0.3, 0.2, 0);
+        strokeWeight(1);
+        this.curveBetween(this.x, this.y+50, this.x+300, this.y+50, 0.3, 0.1, 0);
 
         noStroke();
     }
