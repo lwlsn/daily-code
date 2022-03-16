@@ -1,5 +1,8 @@
-// Wednesday 16th 
-let DIM = 4;
+// Wednesday 16th March 
+
+// Happy bday sis
+
+let DIM = 6;
 let t = 0.01;
 
 let size = 200;
