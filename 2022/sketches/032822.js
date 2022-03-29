@@ -13,8 +13,6 @@ function draw() {
   background(0);
 
 
-
-
 //   rotateX(noise(t/2)*5);
 //   rotateY(noise(t)*5);
 
