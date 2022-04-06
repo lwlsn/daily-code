@@ -1,5 +1,7 @@
 // Wednesday 6th April 
 
+// tomorrow ... add the streams on the same timeline
+
 let result;
 let index = 0; 
 let numTrails = 30;
