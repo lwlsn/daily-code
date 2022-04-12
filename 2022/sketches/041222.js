@@ -1,5 +1,7 @@
 // Tuesday 12 April 
 
+// miss u whitby
+
 // Inspo.. https://openprocessing.org/sketch/1236670
 
 function setup() {
