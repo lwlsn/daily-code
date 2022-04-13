@@ -5,7 +5,7 @@
 // Inspo.. https://openprocessing.org/sketch/1236670
 
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(600, 600);
     noStroke();
     // noLoop();
 
