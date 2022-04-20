@@ -1,6 +1,5 @@
 // Tuesday 19th April
 
-
 let kMax;
 let step = [];
 let n = 80; // number of blobs
