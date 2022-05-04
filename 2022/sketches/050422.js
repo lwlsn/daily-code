@@ -20,11 +20,10 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    background(2, 20);
 
-    stroke(255);
+    stroke(255, 5);
 
-  
 
 
     for (let i=0; i<count-1; i++) {
