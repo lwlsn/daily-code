@@ -52,7 +52,7 @@ class Ball {
     display() {
         fill ("#eb3437");
         noStroke();
-        ellipse(this.xPos, this.yPos, 3, 3);
+        ellipse(this.xPos, this.yPos, 5, 5);
     }
 
     move() {
