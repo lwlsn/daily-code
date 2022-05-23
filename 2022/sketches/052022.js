@@ -40,36 +40,103 @@ function setup() {
         song[i] = table[i].getColumn('current_music');
     }
 
+    frameRate(4);
+
 }
 
-function draw() {
-    background(0);
-    // computer();
-
-	
-
-    if (moods.length <  500) {
-        moods.push (new Moods());
-    }
-}
 
 
 function computer() {
 
     image(backgroundimg, 0, 0, width, height);
 
-    if (frameCount%100 > 0 && frameCount%100< 10)   {
+    let flashVal = frameCount%20;
+
+    if (flashVal > 0 && flashVal< 11)   {
          backgroundimg.filter(INVERT);
         //  postit.filter(INVERT);
     }
   
-    fill (255);
-    image(postit, 80, 450, 50, 50);
     textFont('Courier');
 	text( "moods as recorded" + "\n" +" in livejournal" + "\n" + "2001 to 2004", 80, 150 );
 
 
 }
+
+
+
+function draw() {
+    // background(0);
+    computer(); 
+
+    print(frameCount);
+
+
+    
+    textFont('Lucida Handwriting');
+	fill (0);
+	text( "moods as recorded" + "\n" +" in livejournal" + "\n" + "2001 to 2004", 50, 730 );
+	textFont('courier');
+	
+	if (moods.length <  500) {
+	moods.push (new Moods());
+	}
+	
+	for(var i=0; i < moods.length; i++){
+		if (moods[i].lifespan <= 0){
+			moods.splice(i,1);
+		}
+		else{
+		moods[i].compositeColors();
+		fill (moods[i].color);
+		text(moods[i].one, moods[i].posX, moods[i].posY);
+		text(moods[i].two, moods[i].posX+40, moods[i].posY+10);
+		text(moods[i].three, moods[i].posX+60, moods[i].posY);
+		text(moods[i].four, moods[i].posX+80, moods[i].posY);
+		text(moods[i].five, moods[i].posX+20, moods[i].posY+20);
+		}
+		}
+		if(isHearts){
+			makeHearts();
+		}
+}
+
+function makeHearts(){
+	for (var i=0; i < width; i++) {
+		image(heart, i, random (height));
+		i+=60;
+	}
+}
+
+
+function keyTyped(){
+	
+	
+	if (key === 'o') {
+		isHearts = true;
+		
+		//set a timer for 5000 milliseconds
+		setTimeout( function(){
+			isHearts = false;	
+		}, 5000);
+		
+		
+		console.log(key);
+		// noLoop();
+		computer();
+		textStyle(BOLD);
+		text ('teen angst poem, generated from subjects of my livejournal posts, 2001-2004' + '\n' + 'press o to refresh', 100, 100);
+		textStyle(NORMAL);
+		text (random(subject), 110, 80, 250);
+	}
+	}
+	
+	function mousePressed(){
+		moods.length = 0;
+	// redraw()
+	}       
+   
+    
 
 
 class Moods {
@@ -83,8 +150,8 @@ class Moods {
 	    this.five= random (mood[4]);
 	    this.six=random (mood[5]);
 	    this.color = color (random(this.colors));
-	    this.posX= random (100, 600);
-	    this.posY=random (100, 550);
+	    this.posX= random (100, 350);
+	    this.posY=random (100, 370);
 	    this.lifespan=155;
         
     }
