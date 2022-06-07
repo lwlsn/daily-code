@@ -19,8 +19,10 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    
     clear();
+    background(0);
+ 
     orbitControl(4, 4);//Mouse control
 
     // Frame count rotation
