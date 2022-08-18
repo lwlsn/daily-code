@@ -14,18 +14,12 @@ let xoff = 0.0;
 let yoff = 0.0;
 
 
-let backgroundImg;
-
-function preload() {
-    backgroundImg=loadImage('assets/koi.jpeg');
-}
 
 function setup() {
 
     pixelDensity(1);
     createCanvas(600, 600);
 
-    image(backgroundImg, 0, 0, width, height);
     noStroke();
     cols = width; 
     rows = height;
