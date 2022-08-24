@@ -22,7 +22,7 @@ function draw() {
     stroke(252, 3, 232);
     textSize(22*scale);
     textAlign(CENTER);
-    text("THERE ARE 6 MILLION BILLIONAIRES IN THE UK", width/2, height/2);
+    text("THERE ARE 6 BILLIONAIRES IN THE UK", width/2, height/2);
     text("THAT HOLD AS MUCH WEALTH AS 12 MILLION PEOPLE", width/2, height/2 +50);
 
     t += 0.01;
