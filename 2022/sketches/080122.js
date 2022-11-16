@@ -23,8 +23,8 @@ function draw() {
     }
 
 
-
     phase += 0.01;
+    print(slider.value());
 }
 
 
